@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Buenas Practicas... O como aprendi que lo que hacia estaba mal...</title>
+
+		<meta name="description" content="Presentacion para escuela donde planteo conceptos de buenas practicas de programacion">
+		<meta name="author" content="Sinuhe Jaime Valencia">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/blood.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+		<!-- data-background-transition="slide" -->	
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="/img/1.png" data-transition="zoom">
+					<h3>Buenas practicas de programaci&oacute;n... &oacute; como aprendi que lo que hacia estaba mal</h3>
+					<p>
+						<small>Creado por <a href="http://about.me/sierisimo">Sinuh&eacute; Jaime Valencia</a> / <a href="http://twitter.com/sierisimo">@sierisimo</a></small>
+					</p>
+					<br><br><br><br><br><br><br>	
+				</section>
+
+				<section data-background="/img/2.jpg" data-background-transition="slide">
+					<h2 class="fragment" style="color:red;">¿Que son las buenas practicas?</h2>
+				</section>
+
+				<section data-background="/img/3.jpg">
+					<section>
+						Tipos de buenas practicas
+					</section>
+					<section>
+						<h3>Generales</h3>
+					</section>
+					<section>
+						<h4>Independientes del paradigma</h4>
+					</section>
+					<section>
+						<h4>Independientes del lenguaje</h4>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Ejemplos Generales</h2>
+					</section>
+					<section>
+						<p>Siempre es buena practica tener un comentario al principo del archivo que contenga la informacion global de dicho codigo.</p>
+						<p class="fragment">Por ejemplo:</p>
+						<pre class="fragment"><code>/**
+ * Author:
+ *
+ * Contributors:
+ *
+ * Date:
+ * LastUpdate:
+ * Version:
+ *
+ * Name:
+ *
+ * Description:
+ */
+</code></pre>
+					</section>
+					<section>
+						<p>Aunque esto depende mas del lenguaje que del codigo en si, es buena practica proporcionar este tipo de informacion</p>
+					</section>
+					<section>
+						<p>Entre mas expresivo, mejor:</p>
+						<p class="fragment">Es mas dificil entender:</p>
+						<pre class="fragment"><code>...
+						r = f1(3,4.5,'m');
+						return r;
+						</code></pre>
+						<p class="fragment">Que entender:</p>
+						<pre class="fragment"><code>...
+							result = important_equation_select(3,4.5,'m');
+							return result;
+						</code></pre>
+					</section>
+					<section>
+						<h4>DI NO A LAS VARIABLES GLOBALES INECESARIAS</h4>
+					</section>
+					<section>
+						<h5>Documenta... DOCUMENTA HASTA EL INFINITO</h5>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h3>Independientes del paradigma</h3>
+					</section>
+					<section>
+						<p>No hay ejemplos :(</p>
+					</section>
+					<section>
+						<p><em>**musica de elevador**</em></p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h4>Independientes del lenguaje</h4>
+					</section>
+					<section data-background="#000055" data-background-transition="slide">
+						<h1>C/C++</h1>
+					</section>
+					<section data-background="/img/java1.jpg" data-background-transition="slide"></section>
+					<section data-background="#494949" data-background-transition="slide">
+						<h1>JavaScript</h1>
+						<img src="/img/javascript-redirect.png">
+					</section>
+					<section>
+						<h3>Prolog (y derivados)</h3>	
+					</section>
+					<section>
+						<p>Seccion de comentarios patrocinados...</p>
+					</section>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
