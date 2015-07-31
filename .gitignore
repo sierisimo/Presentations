@@ -1,6 +1,8 @@
 MoneyInMotion/
 GoodPractice/
+AwesomeGame/
 reveal.js/
+
 
 # Logs
 logs
@@ -30,5 +32,3 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
-
-
